@@ -1,10 +1,10 @@
-Title
+TITLE
 # train_schedule
 
-Built with 
+BUILT WITH:  
 Atom
 
-Technologies
+TECHNOLOGIES: 
 HTML
 CSS
 JS, jquery, Ajax
