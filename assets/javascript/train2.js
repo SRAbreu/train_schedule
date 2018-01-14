@@ -53,7 +53,6 @@ var database = firebase.database();
 		$("#tt-input").val("");
 		$("#frequency-input").val("");
 
-
 	});
   //Firebase event watcher
 	database.ref().on("child_added", function(childSnapshot, prevChildKey){
@@ -75,7 +74,7 @@ var database = firebase.database();
 		var minutes = firebaseFrequency - timeRemainder;
 		var nextTrainArrival = moment().add(minutes, "m").format("hh:mm A");
 
-		// Test for correct times and info
+		// Test for correct times
 		console.log(minutes);
 		console.log(nextTrainArrival);
 		console.log(moment().format("hh:mm A"));
@@ -85,7 +84,4 @@ var database = firebase.database();
 		// Add each train's data into the table
 		$("#train-table > tbody").append("<tr><td>" + firebaseName + "</td><td>"+ firebaseDestination + "</td><td>" + firebaseFrequency + " mins" + "</td><td>" + nextTrainArrival + "</td><td>" + minutes + "</td></tr>");
 
-    //handle errors
-
 	});
-  //do I need to send the new data to hte html?
